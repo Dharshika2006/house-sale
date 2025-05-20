@@ -1,0 +1,144 @@
+body {
+  margin: 25px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(to right, #065f1e, #0e8b3e);
+  color: white;
+  padding: 1.7rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 15px;
+}
+
+.thumbnails img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+  border-color: #0e8b3e;
+}
+
+.highlights,
+.info,
+.contact {
+  background: #fff;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  font-size: 1.7rem;
+}
+
+h2 {
+  color: #065f1e;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights ul li {
+    margin-bottom: 2px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+ul li {
+  padding: 0;
+  font-size: 1.5rem;
+
+}
+
+/* Lightbox styles */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+#lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
+#lightbox button {
+    font-size: 3rem;
+}
+
+.contact button {
+  background-color: #0e8b3e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #0c742f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e2e2e2;
+  font-size: 0.9rem;
+  color: #555;
+}

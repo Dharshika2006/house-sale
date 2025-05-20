@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Independent House for Sale</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="hero">
+    <h1>Independent House for Sale</h1>
+    <p>Ameenpur, Hyderabad — 4BHK Luxury Villa</p>
+  </header>
+
+  <section class="gallery">
+    <div class="image-container">
+    <div class="main-image">
+      <img id="mainDisplay" src="img1.jpg" alt="Main house" onclick="openLightbox(this.src)" />
+    </div>
+    <div class="thumbnails">
+        <img src="img2.jpg" alt="Floor Plan 1" onclick="openLightbox(this.src)" />
+        <img src="img3.jpg" alt="Floor Plan 2" onclick="openLightbox(this.src)" />
+        <img src="img4.jpg" alt="Floor Plan 3" onclick="openLightbox(this.src)" />
+        <img src="img5.jpg" alt="Floor Plan 4" onclick="openLightbox(this.src)" />
+    </div>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <h2>Highlights</h2>
+    <ul>
+    <pre> 
+      <li>     ✅ Located in Ameenpur, Hyderabad — peaceful & well-connected                                          ✅ Clear Title | HMDA Approved Layout</li> 
+      <li>     ✅ 2185 sq.ft built-up | 150 sq.yds plot                                                               ✅ CCTV Security</li>
+      <li>     ✅ 4 Spacious Bedrooms                                                                                 ✅ Parking for 2 cars
+      <li>     ✅ Garden and Plantation area                                                                          ✅ EV Charging Point</li>
+      <li>     ✅ Bore and Muncipal Water                                                                             ✅ Close to schools, Hospital, Mall</li>
+    </pre>
+    </ul>
+  </section>
+
+  <section class="info">
+    <h2>About the Property</h2>
+    <p>This beautifully designed 4BHK independent house in Ameenpur offers the perfect blend of luxury, space, and comfort. Ideal for families, it’s located near top schools, markets, and hospitals, ensuring everyday convenience. Set in peaceful surroundings, the home comes with a private plantation area, sunny terrace, covered parking and many more amenities! Unlike gated community villas, you enjoy complete privacy, full ownership, and no monthly maintenance fees——making it a smart and luxurious choice for long-term family living.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 99080 34931 &nbsp; </p>
+    <button onclick="alert('Thank you! Our agent will call you.')">Schedule a Visit</button>
+  </section>
+
+  <footer>
+    &copy; All rights reserved.
+  </footer>
+
+      <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <button onclick="event.stopPropagation(); changeImage(-1)">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Expanded view" />
+    <button onclick="event.stopPropagation(); changeImage(1)">&#10095;</button>
+  </div>
+
+  <script>
+    const images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+  let currentIndex = 0;
+
+  function openLightbox(src) {
+    currentIndex = images.indexOf(src.split('/').pop()); // gets index of clicked image
+    document.getElementById("lightbox-img").src = images[currentIndex];
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function changeImage(step) {
+    currentIndex = (currentIndex + step + images.length) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+  </script>
+</body>
+</html>
