@@ -4,6 +4,8 @@ body {
   background: #f4f4f4;
   color: #333;
 font-size: 0.5rem;
+width: 100%
+
 
 }
 
@@ -87,6 +89,14 @@ ul li {
   font-size: 0.5rem;
 
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+
 
 /* Lightbox styles */
 #lightbox {
